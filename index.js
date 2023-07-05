@@ -1,6 +1,24 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  //Write your algorithm here
+  for(let i=0; i < array.length;i++ ){
+    for(let j= i+1;j<array.length ; j++){
+      if(array[i] + array[j] === target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
+//   const complementSet = new Set();
+//   for(let i = 0;i <array.length;i++ ){
+//     const complement = target - array[i];
+//     if(complementSet.has(complement)){
+//       return true ;
+//     }
+//     complement.add(array[i]);
+//   }
+//   return false;
+// }
 
 /* 
   Write the Big O time complexity of your function here
